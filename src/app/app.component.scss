@@ -1,0 +1,786 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  height: 90px; /* Adjust height as needed */
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(245, 245, 245, 0.8);
+  backdrop-filter: blur(5px);
+  transition: backdrop-filter 0.3s ease;
+  z-index: 1000;
+
+  &.navbar-collapsed {
+    background-color: rgba(245, 245, 245, 0.8); /* Ensure solid color when collapsed */
+    backdrop-filter: blur(5px); /* Increase blur when collapsed */
+  }
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: auto !important;
+  max-width: 130px; /* Adjust this value based on your logo size */
+  margin-left: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 15vw;  /* Set the desired width for the logo */
+  height: 85px; /* Set the desired height for the logo */
+}
+
+.navbar-nav {
+  gap: 20px; /* Add spacing between navbar items */
+}
+.navbar-brand img {
+  max-width: 100%; 
+  height: auto; 
+  // image-rendering: -webkit-optimize-contrast; 
+}
+
+
+.logo img {
+  margin-top: -15x;
+  height: 90px !important;
+}
+@media (min-width: 200px) and (max-width: 987px) {
+  .navbar {
+    height: auto;
+  }
+  .navbar-brand {
+    max-width: auto; /* Limit to container width */
+    /* width: auto; */
+    margin: 0 auto; /* Center the logo horizontally */
+    /* height: auto !important; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: auto; /* Maintain aspect ratio */
+    // height: auto !important; /* Maintain aspect ratio */
+  }
+  .logo img {
+    /* max-width: 25vw; /* Ensure image doesn't exceed container width */
+    width: auto !important; /* Maintain aspect ratio */
+    height: auto ; /* Maintain aspect ratio */
+    /* max-height: 25vw; /* Limit height on smaller screens */
+    /* object-fit: contain; /* Ensure the entire logo is visible */
+  }
+}
+.nav-link {
+  font-family: "Playwrite DE Grund", cursive;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff5722 !important; /* Change color on hover */
+}
+
+.signup-btn {
+  font-family: "Playwrite DE Grund", cursive;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #ff5722 !important; /* Change background color on hover */
+  transform: scale(1.05); /* Slightly increase the size on hover */
+  border-radius: 10px;
+}
+
+
+/* Main Content Styles */
+.main-content {
+  padding-top: 80px; /* Adjust this value to account for fixed navbar height and add space */
+  // margin-top: 50px;
+}
+// .image{
+//   height: 3px;
+//   width: 1px;
+// }
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background: #f5f5f5;
+  // margin-top: 65px;
+}
+
+
+.hero-text {
+  max-width: 50%;
+}
+
+.tagline {
+  color: #ff5722;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-family: "Playwrite DE Grund", cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to h1 */
+}
+
+.description {
+  font-size: 18px;
+  margin-bottom: 40px;
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+.cta-button {
+  margin-right: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #25D366; /* WhatsApp green color */
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+.cta-button i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.cta-button:hover {
+  background-color: #128C7E !important; /* Darker WhatsApp green on hover */
+  transform: scale(1.05); /* Slightly increase the size on hover */
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 200px) and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .cta-button {
+    margin-bottom: 10px;
+  }
+}
+
+/* Services Section Styles */
+.services-section {
+  // margin-top: 10px;
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-family: "Playwrite DE Grund", cursive;
+  color: #333;
+  text-shadow: 0px 2px 4px rgba(1, 0, 0, 0); /* Add shadow to h2 */
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service {
+  flex: 1 1 calc(25% - 30px);
+  max-width: calc(25% - 30px);
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 87, 34, 0.2); /* Orange overlay */
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service:hover::before {
+  opacity: 1;
+}
+
+.service img {
+  max-width: 100px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.service:hover img {
+  transform: scale(1.1);
+}
+
+.service h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: "Playwrite DE Grund", cursive;
+  color: #ff5722; /* Matching the theme color */
+}
+
+.service p {
+  font-size: 16px;
+  color: #555;
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff; /* Change background on hover */
+}
+
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Destinations Section Styles */
+.services-section {
+  padding: 60px 20px;
+  margin-top: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-family: "Playwrite DE Grund", cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to h2 */
+}
+
+.destinations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.destination {
+  flex: 1 1 calc(33.333% - 30px);
+  max-width: calc(33.333% - 30px);
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.description1{
+  padding: 60px 20px;
+  margin-top: 10px;
+  background-color: #fff;
+  text-align: center;
+  // display:flexbox;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // gap: 30px;
+  // margin-top: -50px; /* Add margin-top to create space */
+  // padding: 60px 20px;
+  // margin-top: 10px;
+  // background-color: #fff;
+  // text-align: center;
+}
+.destination img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.destination-info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+.destination h3 {
+  font-size: 24px;
+  margin: 0;
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+.destination p {
+  font-size: 16px;
+  margin: 0;
+  font-family: "Playwrite DE Grund", cursive;
+
+}
+
+.destination:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.destination:hover img {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .destinations {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .destination {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+#booking {
+  padding: 20px;
+}
+
+.booking-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.booking-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.booking-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: -20px -20px 15px rgb(135, 206, 235);
+}
+
+.booking-text {
+  flex: 2;
+  padding: 20px;
+}
+
+#booking .step h5 {
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+#booking .step p {
+  font-family: "Playwrite DE Grund", cursive;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .booking-content {
+      flex-direction: column;
+  }
+
+  .booking-image,
+  .booking-text {
+      padding: 10px;
+      text-align: center;
+  }
+
+  .booking-image img {
+      max-width: 80%;
+  }
+}
+/* Testimonials Section */
+/* Testimonials Section */
+.testimonials {
+  background-color: #f8f9fa;
+  padding: 5rem 0;
+}
+
+.testimonials .container {
+  // background: url('../assets/emirates.jpg') center/cover no-repeat;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.testimonials h2 {
+  color: #ff6347;
+  font-weight: bolder;
+  font-size: 36px;
+  margin-bottom: 2rem;
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+.testimonials p {
+  color: #223a66;
+  font-weight: bold;
+  font-size: medium;
+  margin-bottom: 3rem;
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+// .carousel-item {
+//   text-align: center;
+// }
+
+.testimonial {
+  background: #ffffff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.testimonial img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.testimonial .testimonial-name{
+  color: #ff6347;
+
+}
+
+.testimonial p {
+  margin: 0.5rem 0;
+  font-family: "Playwrite DE Grund", cursive;
+  
+}
+
+.testimonial .quote {
+  color: #ff6347;
+  font-size: 24px;
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+@media (max-width: 768px) {
+  .carousel-inner .carousel-item {
+    flex-direction: column;
+  }
+
+  .testimonial {
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-inner .carousel-item {
+    flex-direction: column;
+  }
+
+  .testimonial {
+    margin: 1rem 0;
+  }
+}
+
+.form-section {
+  flex: 1;
+  padding: 40px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 50%;
+  
+}
+
+.form-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: "Playwrite DE Grund", cursive;
+  
+}
+
+
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #002d72;
+  box-shadow: 0 0 5px rgba(0, 45, 114, 0.5);
+  outline: none;
+}
+
+
+
+
+
+.btn {
+  padding: 15px 20px;
+  background-color: #002d72;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: "Playwrite DE Grund", cursive;
+
+}
+
+.btn:hover {
+  background-color: #001f54;
+  transform: scale(1.05);
+}
+
+.btn:active {
+  background-color: #001a48;
+  transform: scale(0.98);
+}
+.appointment-container {
+  background-image: url('../assets/1624956082_emirates-flight.avif');
+  background-size: cover;
+  background-position: center 30%;
+  padding: 20px;
+  border-radius: 8px;
+  color: #223a66;
+}
+
+.appointment-container h2 {
+  font-weight: bolder;
+  font-family: "Playwrite DE Grund", cursive;
+
+}
+
+.appointment-container p {
+  font-weight: bold;
+  font-size: medium;
+  font-family: "Playwrite DE Grund", cursive;
+
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.form-group select,
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button.btn {
+  text-decoration: white;
+  background-color: #ff5722;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+ 
+}
+.btn.disabled {
+  background-color: #1c1c1d; // Disabled background color
+  color: rgb(255, 255, 255); // Disabled text color
+  // cursor: not-allowed; // Change the cursor to indicate the button is disabled
+}
+
+
+button.btn:hover {
+  background-color: #ff5722;
+}
+
+/* Additional CSS for responsiveness */
+@media (max-width: 768px) {
+  .form-row {
+      flex-direction: column;
+  }
+
+  .form-group {
+      margin: 0 0 15px 0;
+  }
+}
+
+// .video-container video {
+//   max-width: 100%;
+//   height: auto;
+//   border-radius: 10px;
+// }
+#footer {
+  padding: 40px 0;
+  background-color: #f8f9fa;
+}
+
+#footer .footer-logo {
+  max-width: 150px; /* Adjust the size as needed */
+  margin-bottom: 20px;
+}
+
+#footer p {
+  color: #ff5722;
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+#footer h5 {
+  font-weight: bold;
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+#footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+#footer ul li {
+  margin-bottom: 10px;
+}
+
+#footer ul li a {
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#footer ul li a:hover {
+  color: #ff5722;
+}
+
+#footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#footer .social-icons a {
+  color: #6c757d;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+#footer .social-icons a:hover {
+  color: #ff5722;
+}
+
+#footer .text-center p {
+  margin-top: 20px;
+  color: #ff5722;
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+#footer .social-icons i {
+  font-size: 20px;
+}
+
+#footer .mb-4 img {
+  max-width: 140px;
+  margin-right: 10px;
+}
+footer .design-credit {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ff6347;
+  font-weight: bold;
+}
+
+
+@media (min-width: 768px) {
+  #footer .row {
+    display: flex;
+    align-items: flex-start;
+  }
+  #footer .col-lg-3,
+  #footer .col-lg-2 {
+    flex: 1;
+    max-width: 20%;
+  }
+  #footer .col-lg-3 {
+    max-width: 25%;
+  }
+}

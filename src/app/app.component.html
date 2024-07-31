@@ -1,0 +1,375 @@
+<div class="navbar navbar-expand-lg ">
+  <div class="container-fluid">
+    <a class="navbar-brand logo" href="#">
+      <img src="../assets/TRAVEL ANYWHERE LOGO WEBSITE.svg" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" [attr.aria-expanded]="!isNavbarCollapsed" aria-label="Toggle navigation"
+      (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngClass]="{'show': !isNavbarCollapsed}" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)" (click)="scrollToSection('main-content')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)" (click)="scrollToSection('service')">Service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)" (click)="scrollToSection('destination')">Destinations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)" (click)="scrollToSection('booking')">Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)" (click)="scrollToSection('contact-us')">Contact Us</a>
+        </li>
+      </ul>
+      <button class="btn btn-dark signup-btn" (click)="closeNavbar()">Call: +91 9993777228</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="main-content" id="main-content">
+  <!-- <div class="image">
+    <img src="../assets/tt.png" alt="Logo">
+  </div> -->
+  <section class="hero">
+    <div class="hero-text">
+
+
+
+      <!-- <p class="tagline">TRAVEL ANYWHERE HOLIDAYS</p> -->
+      <p class="tagline">Cover the Earth, Before it's cover you.</p>
+      <h1>Travel without stress, We'll do the rest.</h1>
+      <!-- <p class="tagline" style="font-weight: bold;">" TRAVEL  ANYWHERE  HOLIDAYS "</p> -->
+      <p class="description">Embark on new adventures, craft lasting memories with us. Explore, experience, and create
+        unforgettable moments. Discover more with every journey.</p>
+      <!-- <button class="btn btn-dark cta-button">Whatsapp</button> -->
+      <button class="cta-button">
+        <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/919993777228" style="color: aliceblue;">Whatsapp</a>
+      </button>
+
+      <!-- <button class="btn btn-dark cta-button">Play Demo</button> -->
+    </div>
+    <div class="hero-image">
+
+      <!-- <a href="https://wa.me/919993777228">whatsapp</a> -->
+      <img src="assets/hero-img.png" alt="Traveler">
+    </div>
+  </section>
+</div>
+<!-- Services Section -->
+<section id="service" class="services-section">
+  <h5 class="text-secondary">CATEGORY</h5>
+  <h2 class="section-title">We Offer Best <span style="font-weight: bolder;">Services</span></h2>
+  <div class="services">
+    <div class="service">
+      <img src="../assets/Visa.png" alt="Visa">
+      <h3>Visa</h3>
+      <p>Get your visa processed quickly and easily with our expert assistance.</p>
+    </div>
+    <div class="service">
+      <img src="../assets/icon2.png" alt="Best Flights">
+      <h3>Best Flights</h3>
+      <p>Find and book the best flights at the most competitive prices.</p>
+    </div>
+    <div class="service">
+      <img src="../assets/hotel.png" alt="Best Hotels">
+      <h3>Best Hotels</h3>
+      <p>Stay in top-rated hotels with the best amenities and services.</p>
+    </div>
+    <div class="service">
+      <img src="../assets/cruise2.png" alt="Best Cruise">
+      <h3>Best Cruise</h3>
+      <p>Enjoy luxurious cruise experiences with exceptional facilities.</p>
+    </div>
+    <div class="service">
+      <img src="../assets/holidayyy.png" alt="Holiday Package">
+      <h3>Holiday Package</h3>
+      <p>Experience unforgettable holidays with our tailored packages.</p>
+    </div>
+  </div>
+</section>
+
+<section id="destination" class="description1">
+  <h5 class="text-secondary">Destination satisfaction Guranteed for you.</h5>
+  <h2 class="section-title">Top <span style="font-weight: bold;">Destinations.</span></h2>
+  <div class="destinations">
+    <div class="destination">
+      <img src="../assets/turkey-best-cities-istanbul-1.jpg" alt="Turkey">
+      <div class="destination-info">
+        <h3>Turkey</h3>
+        <p>4 Nights / 5 days</p>
+      </div>
+    </div>
+    <div class="destination">
+      <img src="../assets/dubaiuae.jpg" alt="Dubai">
+      <div class="destination-info">
+        <h3>Dubai,UAE</h3>
+        <p>4 Nights / 5 days</p>
+      </div>
+    </div>
+    <div class="destination">
+      <img src="../assets/Singapore.jpg" alt="Singapore">
+      <div class="destination-info">
+        <h3>Singapore</h3>
+        <p>5 Nights / 6 days</p>
+      </div>
+    </div>
+    <div class="destination">
+      <img src="../assets/thailand.cms" alt="Thailand">
+      <div class="destination-info">
+        <h3>Thailand</h3>
+        <p>4 Nights / 5 days</p>
+      </div>
+    </div>
+    <div class="destination">
+      <img src="../assets/maldives.jpg">
+      <div class="destination-info">
+        <h3>Maldives</h3>
+        <p>3 Nights / 4 days</p>
+      </div>
+    </div>
+    
+    <div class="destination">
+      <img src="../assets/indonesia.jpg" alt="Bali">
+      <div class="destination-info">
+        <h3>Indonesia</h3>
+        <p>5 Nights / 6 days</p>
+      </div>
+    </div>
+    <div class="destination">
+      <img src="../assets/petronas-towers-kuala-lumpur-malaysia-wallpaper-preview.jpg" alt="Full Europe">
+      <div class="destination-info">
+        <h3>Malaysia</h3>
+        <p>5 Nights / 6 days</p>
+      </div>
+    </div>
+    <div class="destination">
+      <img src="../assets/baku.webp" alt="Baku">
+      <div class="destination-info">
+        <h3>Azerbaijan</h3>
+        <p>5 Nights / 6 days</p>
+      </div>
+    </div>
+
+   
+
+  </div>
+</section>
+<!-- bookinhg -->
+<!-- <section id="booking" class="services-section" style="background-color: antiquewhite;">
+  <div class="container">
+    <div class="booking-content">
+      <div class="booking-text">
+        <h2 id="booking-title" class="section-title text-center">Book your next trip in <span
+            style="font-weight: bold;">" 3 easy steps "</span></h2>
+        <div class="step mb-5 text-secondary">
+          <h5 class="fw-bold fs-0" style="color: #ff5722;">1. Choose Destination</h5>
+          <p>Choose your favourite place. No matter where you travel inside the World.</p>
+        </div>
+        <div class="step mb-5 text-secondary">
+          <h5 class="fw-bold fs-0" style="color: #ff5722;">2. Make Payment</h5>
+          <p>After finding your perfect spot, make your payment and get ready to travel.</p>
+        </div>
+        <div class="step mb-5 text-secondary">
+          <h5 class="fw-bold fs-0" style="color: #ff5722;">3. Reach Airport on Selected Date</h5>
+          <p>Lastly, you have to arrive at the airport on time and enjoy the vacation.</p>
+        </div>
+      </div>
+      <div class="booking-image">
+        <img src="../assets/booking-img.jpg" alt="Booking illustration" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section> -->
+<section class="appointment" id="booking">
+  <div>
+    <div class="container appointment-container my-0">
+      <h2>Book your next tour with us.</h2>
+      <p>Our service is outstanding and reliable. We ensure every detail is meticulously planned, making your travel
+        experience seamless and enjoyable.</p>
+      <form [formGroup]="bookingForm" id="bookingForm" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+          <div class="form-group">
+            <select name="department" id="department" formControlName="department" required>
+              <option value="" disabled>Choose Destination</option>
+              <option value="international">International Package</option>
+              <option value="domestic">Domestic Package</option>
+              <option value="group">Group Tour</option>
+              <option value="cruise">Cruise Tour</option>
+            </select>
+            <div
+              *ngIf="bookingForm.get('department')?.invalid && (bookingForm.get('department')?.touched || bookingForm.get('department')?.dirty)">
+              <small class="text-danger" style="font-weight: bold;">Please select a destination</small>
+            </div>
+          </div>
+          <div class="form-group">
+            <input name="date" type="date" id="date" formControlName="date" required>
+            <div
+              *ngIf="bookingForm.get('date')?.invalid && (bookingForm.get('date')?.touched || bookingForm.get('date')?.dirty)">
+              <small class="text-danger" style="font-weight: bold;">Please select a date</small>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <input name="name" type="text" id="name" formControlName="name" placeholder="Name" required>
+            <div
+              *ngIf="bookingForm.get('name')?.invalid && (bookingForm.get('name')?.touched || bookingForm.get('name')?.dirty)">
+              <small class="text-danger" *ngIf="bookingForm.get('name')?.errors?.['required']"
+                style="font-weight: bold;">
+                Full Name is required
+              </small>
+              <small class="text-danger" *ngIf="bookingForm.get('name')?.errors?.['minlength']"
+                style="font-weight: bold;">
+                Full Name must be at least 3 characters
+              </small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input name="phone" type="tel" id="phone" formControlName="phone" placeholder="Phone Number"
+              pattern="[0-9]{10}" required>
+            <div
+              *ngIf="bookingForm.get('phone')?.invalid && (bookingForm.get('phone')?.touched || bookingForm.get('phone')?.dirty)">
+              <small class="text-danger" *ngIf="bookingForm.get('phone')?.errors?.['required']"
+                style="font-weight: bold;">Phone Number is required</small>
+              <small class="text-danger" *ngIf="bookingForm.get('phone')?.errors?.['pattern']"
+                style="font-weight: bold;">Phone Number must be 10 digits</small>
+            </div>
+          </div>
+
+        </div>
+        <div class="form-group mb-4">
+          <label for="message">Other Inquiry</label>
+          <textarea id="message" name="message" formControlName="message" placeholder="Other Inquiry"></textarea>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn" [ngClass]="{'disabled': bookingForm.invalid}"
+            [disabled]="bookingForm.invalid">Book</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<section class="testimonials text-center pt-5 pb-5">
+  <div class="container">
+    <h2 class="mb-4">Discover what our travelers say</h2>
+    <p class="mb-5">Explore the experiences of our happy travelers. Here are some testimonials:</p>
+    <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="testimonial">
+                <img src="../assets/WhatsApp Image 2024-07-03 at 5.02.49 PM.jpeg" alt="Customer"
+                  class="rounded-circle mb-3">
+                <p><strong>Amazing adventure!</strong></p>
+                <p class="testimonial-name">Ammar Hussain</p>
+                <p>They provided an incredible travel experience. The service was outstanding, and every detail was
+                  perfectly managed. I highly recommend them for a memorable and hassle-free journey.</p>
+                <p class="quote"><i class="fas fa-quote-left"></i></p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="testimonial">
+                <img src="../assets/WhatsApp Image 2024-07-03 at 5.02.50 PM.jpeg" alt="Customer"
+                  class="rounded-circle mb-3">
+                <p><strong>Exceeded expectations!</strong></p>
+                <p class="testimonial-name">Adeel Khan</p>
+                <p>Our trip was flawlessly organized, and the customer service was exceptional. They went above and
+                  beyond to ensure we had an amazing experience. Highly recommended!</p>
+                <p class="quote"><i class="fas fa-quote-left"></i></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="testimonial">
+                <img src="https://via.placeholder.com/150" alt="Customer" class="rounded-circle mb-3">
+                <p><strong>Unforgettable journey!</strong></p>
+                <p class="testimonial-name">Michael Brown</p>
+                <p>Their expertise in planning our trip made it a memorable experience, consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.</p>
+                <p class="quote"><i class="fas fa-quote-left"></i></p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="testimonial">
+                <img src="https://via.placeholder.com/150" alt="Customer" class="rounded-circle mb-3">
+                <p><strong>Great service!</strong></p>
+                <p class="testimonial-name">Emily Davis</p>
+                <p>Their dedication to making our trip smooth and enjoyable was commendable, consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.</p>
+                <p class="quote"><i class="fas fa-quote-left"></i></p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <!-- <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a> -->
+    </div>
+  </div>
+</section>
+
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <img src="../assets/TRAVEL ANYWHERE LOGO WEBSITE.svg" alt="Jadoo Logo" class="footer-logo">
+        <p>Book your trip in minutes, gain full control for a lifetime.</p>
+      </div>
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5>Packages</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">International Package</a></li>
+          <li><a href="#">Domestic Package</a></li>
+          <li><a href="#">Cruise Package</a></li>
+          <li><a href="#">Group Package</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5>Other Services</h5>
+        <ul class="list-unstyled">
+          <li><a (click)="scrollToSection('service')">Visa</a></li>
+          <li><a (click)="scrollToSection('service')">Flight Booking</a></li>
+          <li><a (click)="scrollToSection('service')">Hotel Booking</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4" id="contact-us">
+        <h5 style="font-weight: bold;">Contact Us</h5>
+        <ul class="list-unstyled" style="font-weight: bold; color: #ff6347;">
+          <li>Office Address : C8, 4th Floor, Behind Johri Jewellers, 10 No Market, Arera Colony, Bhopal</li>
+          <li>Call/Whatsapp : +91 9993777228</li>
+          <li>Email - travelanywhereholidays@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p style="font-weight: bold;">All rights reserved @TRAVEL ANYWHERE HOLIDAYS</p>
+        <p class="design-credit">Designed and Developed by FalconTech Solutions</p>
+      </div>
+    </div>
+  </div>
+</footer>
